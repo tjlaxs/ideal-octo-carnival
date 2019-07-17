@@ -9,4 +9,6 @@ install:
 
 script:
   - . /home/travis/.nix-profile/etc/profile.d/nix.sh
+  - export NIXPKGS="https://github.com/NixOS/nixpkgs-channels/archive/nixos-18.09.tar.gz"
+  - export NIX_PATH=nixpkgs=${NIXPKGS}
   - "nix-shell -p 'etaPackages.etaWithPackages (p: [])' --run 'eta src/Main.hs'"
