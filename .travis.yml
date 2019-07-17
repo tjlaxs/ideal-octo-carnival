@@ -8,4 +8,5 @@ install:
   - ln -s ~/eta-nix/overlay.nix ~/.config/nixpkgs/overlays/eta-overlay.nix
 
 script:
+  - . /home/travis/.nix-profile/etc/profile.d/nix.sh
   - "nix-shell -p 'etaPackages.etaWithPackages (p: [])' --run 'eta src/Main.hs'"
