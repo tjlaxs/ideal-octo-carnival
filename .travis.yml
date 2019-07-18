@@ -13,7 +13,7 @@ install:
   - mkdir -p ~/.config/nixpkgs/overlays
   - ln -s ${PWD}/eta-nix/overlay.nix ~/.config/nixpkgs/overlays/eta-overlay.nix
 
-before_cache: 'if [ ! "$(ls -A $HOME/nix-cache)" ]; then cp -a /nix/* $HOME/nix-cache ; fi
+before_cache: 'if [ ! "$(ls -A $HOME/nix-cache)" ]; then cp -a /nix/* $HOME/nix-cache ; fi'
 
 cache:
   directories:
