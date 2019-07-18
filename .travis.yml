@@ -16,4 +16,5 @@ script:
   - export NIXPKGS="https://github.com/NixOS/nixpkgs-channels/archive/nixos-18.09.tar.gz"
   - export NIX_PATH=nixpkgs=${NIXPKGS}
   - "nix-shell -p haskell.compiler.ghc7103 --command 'ghc --version'"
+  - "nix-shell -p eta-boot-meta --comnnad 'echo ok'"
   - "echo ok #nix-shell -p 'etaPackages.etaWithPackages (p: [])' --run 'eta src/Main.hs'"
