@@ -26,6 +26,6 @@ script:
   - "#nix-shell -p haskell.compiler.ghc7103 --command 'ghc --version'"
   - "nix-shell -p haskellPackage.Cabal --command 'cabal --version'"
   - "#nix-shell -p etaPackages.basement --command 'echo ok'"
-  - "nix-shell -p etaPackages.eta-repl --command 'echo ok'"
+  - "#nix-shell -p etaPackages.eta-repl --command 'echo ok'"
   - "#nix-shell -p etaPackages.eta-boot-meta --command 'echo ok'"
   - "#nix-shell -p 'etaPackages.etaWithPackages (p: [])' --run 'eta src/Main.hs'"
